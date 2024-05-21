@@ -27,7 +27,7 @@ class Player {
       this.height = proportionalSize(40);
     }
     draw() {
-      ctx.fillStyle = "#99c9ff";
+      ctx.fillStyle = "#00008B";
       ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
     
@@ -55,3 +55,13 @@ class Player {
       }
     }
 }
+
+const player = new Player();
+
+const startGame = () => {
+    canvas.style.display = "block";
+    startScreen.style.display = "none";
+    player.draw();
+}
+  
+startBtn.addEventListener("click", startGame);
